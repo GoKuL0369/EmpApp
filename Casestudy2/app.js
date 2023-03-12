@@ -22,8 +22,13 @@ app.use(express.static(path.join(__dirname+'/dist/FrontEnd')));
 //Task 2 : write api with error handling and appropriate api mentioned in the TODO below
 
 
-
-
+Mongoose.connect("mongodb+srv://gokulgk647:Gokul2001@cluster0.nflfpth.mongodb.net/?retryWrites=true&w=majority",{useNewUrlparser: true})
+.then(() => {
+    console.log("Database Connected!");
+  })
+  .catch(() => {
+    console.log("Error connecting");
+  });
 
 
 
